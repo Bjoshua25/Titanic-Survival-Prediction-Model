@@ -18,9 +18,14 @@ Build an optimum classification model to predict survival of passenegers in the 
     - 'SibSp' : *`Siblings/Spouses` - indicates the number of siblings or spouse accompanying the passenger. (brother, sister, husband, or wife)*
     - 'Parch' : *`Parent/Child` - indicates the number of parent or child accompanying the passenger. (Mother, father, daughter, son)*
     - 'Fare' : *This the ticket and total fare price*
+
+![](image/boxplot_univariant.png)
+      
 - The distribution of the `target` feature showed an imbalanced class. With the ratio of surviving passenger to passengers who didnt survive being 3 to 5.
 - Meanwhile, the `Pclass` column showed that there are more 3rd class ticket passengers than others.
 - The distribution of the `Age` feature is r**ight-skewed**, with a large number of passengers in their 20s and 30s.
 - column `SibSp` is **Extremely right-skewed** and heavily concentrated at 0 and 1. The vast majority traveled with zero or one sibling/spouse.
 - column `Parch` is **Extremely right-skewed and heavily concentrated at 0**. Most passengers traveled with no parents or children.
 - column `Fare` has a severely right-skewed distribution, with most fares below $50. This is typical, as 3rd class fares are low. Fares reach over $500, indicating passengers who paid for luxury cabins (1st class) skew the mean significantly. This feature will definitely need Log transformation.
+
+![](image/histogram.png)
